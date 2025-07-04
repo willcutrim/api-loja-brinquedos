@@ -1,0 +1,41 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+  <div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-body">
+      <h4 class="card-title mb-4">Login</h4>
+      <form id="loginForm">
+        <div class="mb-3">
+          <input type="text" name="username" class="form-control" placeholder="Usuário" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" name="password" class="form-control" placeholder="Senha" required>
+        </div>
+        <button class="btn btn-primary w-100">Entrar</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = {
+        username: e.target.username.value,
+        password: e.target.password.value
+      };
+      const res = await fetch("/api/usuarios/token/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        const json = await res.json();
+        localStorage.setItem("access_token", json.access);
+        window.location.href = "/clientes/";
+      } else {
+        alert("Login inválido");
+      }
+    });
+  </script>
+{% endblock %}
