@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# SQLite
+*.sqlite3
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.py-tpl
+*.mo
+db.sqlite3
+media/
+staticfiles/
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# Migrations (se quiser ignorar, opcional)
+# */migrations/*.py
+*/migrations/__pycache__/
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Teste / cobertura
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Arquivos temporários
+*.bak
+*.swp
+*.tmp

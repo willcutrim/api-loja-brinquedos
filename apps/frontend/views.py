@@ -11,3 +11,7 @@ class ClientesView(TemplateView):
 
 class EstatisticasView(TemplateView):
     template_name = 'frontend/clientes/estatisticas.html'
+
+
+class VendasView(TemplateView):
+    template_name = 'frontend/vendas/vendas.html'

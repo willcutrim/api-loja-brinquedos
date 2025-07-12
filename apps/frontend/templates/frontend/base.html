@@ -12,8 +12,11 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Loja de Brinquedos</a>
       <div>
-        <a href="/clientes/" class="btn btn-outline-light me-2">Clientes</a>
-        <a href="/clientes/estatisticas/" class="btn btn-outline-light">Estatísticas</a>
+        <a href="{% url 'clientes' %}" class="btn btn-outline-light me-2">Clientes</a>
+        <a href="{% url 'estatisticas' %}" class="btn btn-outline-light">Estatísticas</a>
+        <a href="{% url 'vendas' %}" class="btn btn-outline-light">
+          Nova Venda
+        </a>
       </div>
     </div>
   </nav>

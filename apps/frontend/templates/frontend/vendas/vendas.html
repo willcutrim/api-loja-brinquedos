@@ -1,0 +1,24 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+    <form id="form-venda">
+        <div class="mb-3">
+            <label for="cliente" class="form-label">Cliente</label>
+            <select id="cliente" class="form-select"></select>
+        </div>
+
+        <div class="mb-3">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" id="data" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="valor" class="form-label">Valor</label>
+            <input type="number" id="valor" step="0.01" class="form-control">
+        </div>
+
+        <button id="btn-criar-venda" type="submit" class="btn btn-success">Cadastrar Venda</button>
+        <div id="resposta-venda" class="d-none"></div>
+    </form>
+    
+{% endblock %}
